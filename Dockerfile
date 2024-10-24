@@ -1,21 +1,3 @@
-# SfDockerStarter
-#### Sym2024dock
-
-    symfony new Sym2024dock --version=lts --webapp
-
-    cd Sym2024dock
-
-## .env
-
-! `mysql:3306` est le nom du service dans le fichier `docker-compose.yaml`
-
-    DATABASE_URL="mysql://user:password@mysql:3306/symfony"
-
-## Docker
-
-Création du fichier `Dockerfile`
-
-```dockerfile
 FROM php:8.2-fpm
 
 # Installer les extensions PDO et MySQL
@@ -46,6 +28,4 @@ RUN docker-php-ext-install opcache \
     && echo "opcache.revalidate_freq=0" >> /usr/local/etc/php/conf.d/opcache.ini \
     && echo "opcache.validate_timestamps=1" >> /usr/local/etc/php/conf.d/opcache.ini
 
-
-
-```
+    
