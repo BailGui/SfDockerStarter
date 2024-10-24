@@ -141,3 +141,8 @@ server {
 }
 ```
 
+## Lancement de Docker
+
+    docker-compose down
+    docker-compose build
+    docker-compose up -d
