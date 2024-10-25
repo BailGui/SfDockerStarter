@@ -146,3 +146,21 @@ server {
     docker-compose down
     docker-compose build
     docker-compose up -d
+
+## Pour utiliser PHP de l'intérieur du container
+
+    docker-compose exec php bash
+
+Par exemple pour installer les dépendances :
+
+    composer install
+
+Pour quitter le container :
+
+    exit
+
+## Création de Post
+
+        php bin/console make:entity Post
+
+
